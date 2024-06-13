@@ -19,6 +19,22 @@ includes:
     taskfile: taskfile.local.yaml
     optional: true
     aliases: ["local"]
+  Pyml:
+    taskfile: Taskfile.project.yml
+    optional: true
+    aliases: ["project"]
+  Pyaml:
+    taskfile: Taskfile.project.yaml
+    optional: true
+    aliases: ["project"]
+  pyml:
+    taskfile: taskfile.project.yml
+    optional: true
+    aliases: ["project"]
+  pyaml:
+    taskfile: taskfile.project.yaml
+    optional: true
+    aliases: ["project"]
   example:
     taskfile: Taskfile.d/example.yaml
     optional: true
