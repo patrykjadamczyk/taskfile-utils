@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+includes:
+  local-yml:
+    taskfile: Taskfile.local.yml
+    optional: true
+  local-yaml:
+    taskfile: Taskfile.local.yaml
+    optional: true
+  locall-yml:
+    taskfile: taskfile.local.yml
+    optional: true
+  locall-yaml:
+    taskfile: taskfile.local.yaml
+    optional: true
+  format:
+    taskfile: Taskfile.d/format.yaml
+    optional: true
+  profile:
+    taskfile: Taskfile.d/profile.yaml
+    optional: true
+  test:
+    taskfile: Taskfile.d/test.yaml
+    optional: true
+  build:
+    taskfile: Taskfile.d/build.yaml
+    optional: true
+  run:
+    taskfile: Taskfile.d/run.yaml
+    optional: true
+  deps:
+    taskfile: Taskfile.d/deps.yaml
+    optional: true
+  check:
+    taskfile: Taskfile.d/check.yaml
+    optional: true

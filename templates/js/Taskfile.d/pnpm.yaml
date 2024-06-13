@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+tasks:
+    default:
+        desc: "Start pnpm"
+        cmds:
+            - pnpm {{.CLI_ARGS}}
+    dev:
+        desc: "Start development"
+        cmds:
+            - pnpm start-dev
+    pnpm:
+        desc: "Start pnpm"
+        cmds:
+            - pnpm {{.CLI_ARGS}}

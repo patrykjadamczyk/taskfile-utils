@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+tasks:
+    default:
+        desc: "Run all checks"
+        deps:
+            - vet
+            - vulncheck
+    vulncheck:
+        desc: "Run vulncheck"
+        cmds:
+            - go install golang.org/x/vuln/cmd/govulncheck@latest
+            - govulncheck ./...
+    vet:
+        desc: "Analyze all files using go vet"
+        cmds:
+            - go vet ./...

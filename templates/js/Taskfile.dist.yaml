@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+includes:
+  local-yml:
+    taskfile: Taskfile.local.yml
+    optional: true
+  local-yaml:
+    taskfile: Taskfile.local.yaml
+    optional: true
+  locall-yml:
+    taskfile: taskfile.local.yml
+    optional: true
+  locall-yaml:
+    taskfile: taskfile.local.yaml
+    optional: true
+  pnpm:
+    taskfile: Taskfile.d/pnpm.yaml
+    optional: true
+  biome:
+    taskfile: Taskfile.d/biome.yaml
+    optional: true

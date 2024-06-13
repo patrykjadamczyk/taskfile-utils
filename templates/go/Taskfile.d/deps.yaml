@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+tasks:
+    default:
+        desc: "Update all dependencies"
+        deps:
+            - update
+    tidy:
+        desc: "go mod tidy"
+        cmds:
+            - go mod tidy
+    download:
+        desc: "go mod download"
+        cmds:
+            - go mod download
+    update:
+        desc: "Update all dependencies"
+        cmds:
+            - go get -u ./...
+            - go mod tidy

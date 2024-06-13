@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+tasks:
+    default:
+        desc: "Start executable"
+        deps:
+            - exe
+    exe:
+        desc: "Start executable"
+        cmds:
+            - ./app.exe {{.CLI_ARGS}}

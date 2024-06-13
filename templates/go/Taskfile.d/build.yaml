@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+---
+version: '3'
+
+tasks:
+    default:
+        desc: "Update dependencies, build and run"
+        deps:
+            - update-deps
+            - build
+            - exe
+    update-deps:
+        desc: "Update dependencies"
+        cmds:
+            - go mod tidy
+    build:
+        desc: "Build project"
+        cmds:
+            - go build -v -x -o ./app.exe
+    livebuild:
+        desc: "Automatically build project on changes using air"
+        cmds:
+            - go install github.com/cosmtrek/air@latest
+            - air {{.CLI_ARGS}}
+    exe:
+        desc: "Start executable"
+        internal: true
+        cmds:
+            - ./app.exe {{.CLI_ARGS}}
