@@ -19,9 +19,6 @@ includes:
     taskfile: taskfile.local.yaml
     optional: true
     aliases: ["local"]
-  pnpm:
-    taskfile: Taskfile.d/pnpm.yaml
-    optional: true
-  biome:
-    taskfile: Taskfile.d/biome.yaml
+  example:
+    taskfile: Taskfile.d/example.yaml
     optional: true

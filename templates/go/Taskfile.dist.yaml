@@ -3,18 +3,22 @@
 version: '3'
 
 includes:
-  local-yml:
+  Lyml:
     taskfile: Taskfile.local.yml
     optional: true
-  local-yaml:
+    aliases: ["local"]
+  Lyaml:
     taskfile: Taskfile.local.yaml
     optional: true
-  locall-yml:
+    aliases: ["local"]
+  lyml:
     taskfile: taskfile.local.yml
     optional: true
-  locall-yaml:
+    aliases: ["local"]
+  lyaml:
     taskfile: taskfile.local.yaml
     optional: true
+    aliases: ["local"]
   format:
     taskfile: Taskfile.d/format.yaml
     optional: true
