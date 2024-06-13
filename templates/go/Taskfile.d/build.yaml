@@ -20,7 +20,7 @@ tasks:
     livebuild:
         desc: "Automatically build project on changes using air"
         cmds:
-            - go install github.com/cosmtrek/air@latest
+            - go install github.com/air-verse/air@latest
             - air {{.CLI_ARGS}}
     exe:
         desc: "Start executable"
