@@ -1,2 +1,1 @@
-# taskfile-utils
-Taskfile utilities and templates
+# Taskfile utilities and templates
